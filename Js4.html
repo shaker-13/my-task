@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Task 4</title>
+    <script>
+        function showDate() {
+            const date = new Date();
+            const day = date.getDate();
+            const month = date.toLocaleString('default', { month: 'long' });
+            const year = date.getFullYear();
+            document.getElementById('dateDisplay').innerText = ${day}/${month}/${year};
+        }
+
+        function showTime() {
+            const date = new Date();
+            const timeString = date.toString();
+            document.getElementById('timeDisplay').innerText = timeString;
+        }
+    </script>
+    <style>
+        button{
+            padding: 3px 3px 3px 3px;
+            height: 40px;
+            width: 200px;
+            font-size: large;          
+        }
+        .text{
+            font-size: large;           
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="showDate()">show date</button>
+    <div id="dateDisplay" class="text"></div>
+
+    <br><br>
+    
+    <button onclick="showTime()">show Time</button>
+    <div id="timeDisplay" class="text"></div>
+   
+</body>
+</html>
